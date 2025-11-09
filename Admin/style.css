@@ -1,0 +1,607 @@
+/*-------------------------------------------------General Style----------------------------------*/
+
+:root {
+    --light: #efdee9;
+    --lavender: #826a80;
+    --mauve: #5d4755;
+    --plum: #422d35;
+    --brownie: #2a1a1b;
+    --ebony: #241b1e;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body{
+    color: var(--plum);
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 26px;
+}
+
+h4 {
+    font-size: 20px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+h6 {
+    font-size: 16px;
+}
+
+p {
+    font-size: 15px;
+}
+
+.error-popup {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: var(--white);   
+    color: red;                    
+    padding: 18px 22px;
+    border-radius: 12px;
+    font-weight: bold;
+    width: 280px;
+    display: none;
+    animation: fadeSlide 0.4s ease-in-out;
+    z-index: 9999;
+    text-align: left;
+    border-left: 5px solid red;     
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.25); 
+}
+
+@keyframes fadeSlide {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0px); }
+}
+
+.success-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    display: none;
+    align-items: flex-end; 
+    justify-content: center; 
+    padding-bottom: 40px; 
+    z-index: 9999;
+}
+
+.success-box {
+    background: var(--plum); 
+    color: var(--white); 
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 600;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.4);
+    animation: slideUp 0.4s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+
+/* ----------------------------------------------------login------------------------------------*/
+
+.signin-body {
+    background-color: #fafafa;
+}
+
+.signin-body .form-control {
+    border-radius: 10px;
+    border: 2px solid var(--mauve);
+    background: var(--white);
+    color: var(--mauve);
+}
+
+.signin-body .form-control:focus {
+    border-color: var(--mauve);
+    box-shadow: 0 0 6px var(--mauve);
+}
+
+.signin-body .submit-btn {
+    background-color: var(--mauve);
+    color: var(--white);
+    border-radius: 15px;
+    height: 50px;
+}
+
+.signin-body .submit-btn:hover {
+    background-color: var(--plum);
+    color: var(--white);
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 10px 10px 10px rgba(8, 8, 8, 0.2);
+}
+
+.img-container {
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.img-container img {
+    height: 400px;
+    width: 100%;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------Sidebar / Navbar--------------------------------*/
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.main {
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    transition: all 0.35s ease-in-out;
+}
+
+#sidebar {
+    width: 190px;
+    min-width: 70px;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: var(--plum);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav {
+    padding: 0rem 0;
+    flex: 1 1 auto !important;
+}
+
+.sidebar-item a,
+.sidebar-footer a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--light);
+    font-size: 17px;
+    padding: 10px 20px;
+}
+
+.sidebar-item i,
+.sidebar-footer i {
+    font-size: 20px;
+    min-width: 25px;
+    text-align: center;
+    cursor: pointer;
+    color: var(--light);
+    margin: 0;
+}
+
+.sidebar-item,
+.sidebar-footer {
+    padding: 0;
+    text-align: left;
+    border-left: 3px solid transparent;
+    margin-bottom: 10px;
+}
+
+.sidebar-item:hover,
+.sidebar-footer:hover,
+.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-left: 3px solid var(--light);
+}
+
+.offcanvas-body li {
+    border-left: 10px solid transparent;
+}
+
+.offcanvas-body .active {
+    background-color: var(--plum);
+    border-left: 10px solid var(--light);
+    border-radius: 5px;
+
+}
+
+.offcanvas-body .active a,
+.offcanvas-body .active a i {
+
+    color: var(--light);
+}
+
+.custom-title {
+    border: 1px solid var(--plum);
+    color: var(--plum);
+    font-size: 15px;
+}
+
+.custom-title {
+    font-size: 25px;
+}
+
+.top-end-nav i {
+    font-size: 20px;
+}
+
+.top-end-nav img {
+    width: 50px;
+    height: 50px;
+}
+
+.custom-btn {
+    background-color: #fff;
+    border: none;
+    color: var(--plum);
+    font-size: 14px;
+    padding: 8px 14px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.custom-btn:hover {
+    background-color: var(--plum);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+#offcanvasWithBothOptions {
+    border-radius: 0 15px 15px 0;
+    background-color: #f4f1f4;
+    color: var(--plum);
+}
+
+.offcanvas-body a,
+.offcanvas-body i {
+    color: var(--mauve);
+    position: relative;
+}
+
+@media (max-width: 767.98px) {
+    #offcanvasWithBothOptions {
+        width: 70% !important;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------Dashboard------------------------------------*/
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.card-box {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.card-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tci {
+    width: 250px;
+}
+
+.ci {
+    width: 1000px;
+    height: 300px;
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .ci {
+        width: 600px;
+        height: 300px;
+    }
+}
+
+@media (max-width: 767px) {
+    .ci {
+        width: 500px;
+        height: 150px;
+    }
+}
+
+.bar-chart {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+    gap: 15px;
+    justify-content: center;
+}
+
+.bar-chart .bar {
+    width: 40px;
+    background: var(--plum);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    border-radius: 4px 4px 0 0;
+    transition: 0.3s;
+}
+
+.bar-chart .bar span {
+    writing-mode: vertical-rl;
+    padding: 10px;
+    transform: rotate(180deg);
+    color: var(--white);
+    font-size: 12px;
+    padding-bottom: 4px;
+}
+
+.bar-chart .bar:hover {
+    background: var(--mauve);
+}
+
+.line-chart {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+.line-chart svg {
+    width: 100%;
+    height: 100%;
+}
+
+.line-chart polyline {
+    fill: none;
+    stroke: var(--plum);
+    stroke-width: 3;
+}
+
+@media (max-width:575px) {
+    .line-chart {
+        height: 100px;
+    }
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+/*-------------------------------------------------View Pages-----------------------------------*/
+
+.td,
+th,
+tr {
+    color: var(--plum);
+}
+
+
+
+.add a,
+.table-btn a {
+    color: var(--white);
+}
+
+.table img {
+    width: 100px;
+    height: 100px;
+}
+
+.table-btn,
+.add {
+    background: linear-gradient(135deg, var(--mauve), var(--plum));
+    color: var(--white) !important;
+    border: none;
+    border-radius: 25px;
+    padding: 8px 18px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease-in-out;
+}
+
+.add {
+    box-shadow: 0 4px 10px rgba(66, 45, 53, 0.3);
+    border-radius: 15px;
+}
+
+.table-btn:hover,
+.add:hover {
+    background: linear-gradient(135deg, var(--plum), var(--mauve));
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 6px 14px rgba(66, 45, 53, 0.4);
+}
+
+.table-btn:active,
+.add:active {
+    transform: scale(0.95);
+}
+
+tr,
+td {
+    border: 2px dashed var(--plum);
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+/* ---------------------------------------------Add , Update Pages------------------------------*/
+
+.breadcrumb {
+    margin: 20px 0 20px 20px;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--plum);
+}
+
+
+
+.artwork .form-control,
+.artwork .form-select,
+.pro .form-control {
+    border-radius: 12px;
+    border: 2px solid var(--mauve);
+    background: var(--white);
+    color: var(--plum);
+}
+
+.artwork .form-control:focus,
+.artwork .form-select:focus,
+.artwork .form-check-input:focus,
+.pro .form-control:focus {
+    border-color: var(--plum);
+    box-shadow: 0 0 6px var(--plum);
+}
+
+.artwork .form-input::file-selector-button {
+    background-color: var(--mauve);
+    color: var(--white);
+    border: none;
+    border-radius: 11px;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.artwork .form-input::file-selector-button:focus,
+.artwork .form-input::file-selector-button:hover {
+    background-color: var(--mauve);
+}
+
+.artwork select {
+    text-align: center;
+}
+
+.artwork .form-check-input:checked {
+    background-color: var(--mauve);
+    border-color: var(--mauve);
+}
+
+.artwork .form-select option {
+    color: var(--plum);
+}
+
+.form-btn {
+    background-color: var(--mauve);
+    color: var(--white);
+    border-radius: 15px;
+    height: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-btn:hover {
+    background-color: var(--plum);
+    color: var(--white);
+}
+
+.artwork {
+    border: 2px dashed var(--plum);
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.modal-btn {
+    background-color: var(--mauve);
+    color: white;
+}
+
+/*----------------------------------------------------------------------------------------------*/
+
+/* ----------------------------------------------------Profile----------------------------------*/
+
+.txt {
+    text-align: center;
+    position: relative;
+    color: var(--mauve);
+}
+
+.txt::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10%;
+    height: 2px;
+    background-color: var(--ebony);
+}
+
+.profile label{
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.btn-form{
+    background-color: var(--white);
+    border: 2px solid var(--plum);
+    color: var(--plum);
+    width: 100px;
+}
+
+.btn-form:hover{
+    background-color: var(--plum);
+    color: var(--white);
+}
+
+input[readonly],
+textarea[readonly] {
+  background-color: white !important;
+  color: var(--plum);    
+  border: 1px solid var(--plum);
+  opacity: 80%;               
+  cursor: not-allowed;
+}
+
+/*----------------------------------------------------------------------------------------------*/

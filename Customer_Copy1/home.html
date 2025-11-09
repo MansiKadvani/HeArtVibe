@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <!--Bootstrap Links-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+
+    <!--Custom css-->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-------------------------------------------Common Navigation------------------------------->
+
+    <!--Scrolling Text-->
+    <marquee direction="left" class="scrolling-text">
+        <i class="bi bi-heart text-white me-2"></i>HeArtVibe - Discover Art That Speaks to Your Emotions<i
+            class="bi bi-emoji-smile ms-2"></i>
+    </marquee>
+
+    <!-- Offcanvas Navigation -->
+    <div class="offcanvas offcanvas-start d-lg-none" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+        aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title txt-decoration" id="offcanvasWithBothOptionsLabel">Explore HeArtVibe</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" style="color: var(--light);"
+                aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="list-unstyled">
+                <li class="sidebar-item active mb-2">
+                    <a href="home.html">Home</a>
+                </li>
+                <li class="sidebar-item mb-2">
+                    <a href="art_quiz.html">Art & Mood Explorer</a>
+                </li>
+                <div class="accordion" id="offcanvasAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="artistHeading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#artistCollapse" aria-expanded="false" aria-controls="artistCollapse">
+                                Artists
+                            </button>
+                        </h2>
+                        <div id="artistCollapse" class="accordion-collapse collapse" aria-labelledby="artistHeading"
+                            data-bs-parent="#offcanvasAccordion">
+                            <div class="accordion-body p-0">
+                                <ul class="list-unstyled ms-3 mb-0">
+                                    <li>
+                                        <button class="accordion-button collapsed sub-accordion-btn" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#famousArtist"
+                                            aria-expanded="false" aria-controls="famousArtist">
+                                            Famous Artist
+                                        </button>
+                                        <div id="famousArtist" class="accordion-collapse collapse">
+                                            <ul class="list-unstyled ms-3">
+                                                <li><a class="dropdown-item" href="artist1.html">Anjolie Ela Menon</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="artist2.html">Claude Monet</a></li>
+                                                <li><a class="dropdown-item" href="artist3.html">M.F. Husain</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button class="accordion-button collapsed sub-accordion-btn" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#emergingArtist"
+                                            aria-expanded="false" aria-controls="emergingArtist">
+                                            Emerging Artist
+                                        </button>
+                                        <div id="emergingArtist" class="accordion-collapse collapse">
+                                            <ul class="list-unstyled ms-3">
+                                                <li><a class="dropdown-item" href="artist4.html">Rohit Kumar</a></li>
+                                                <li><a class="dropdown-item" href="artist5.html">Aarti Sunder</a></li>
+                                                <li><a class="dropdown-item" href="artist6.html">Julie Curtiss</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="artist.html">All Artist</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="artworkHeading">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#artworkCollapse" aria-expanded="false" aria-controls="artworkCollapse">
+                                Artworks
+                            </button>
+                        </h2>
+                        <div id="artworkCollapse" class="accordion-collapse collapse" aria-labelledby="artworkHeading"
+                            data-bs-parent="#offcanvasAccordion">
+                            <div class="accordion-body p-0">
+                                <ul class="list-unstyled ms-3 mb-0">
+                                    <li>
+                                        <button class="accordion-button collapsed sub-accordion-btn" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#categoryCollapse"
+                                            aria-expanded="false" aria-controls="categoryCollapse">
+                                            Category
+                                        </button>
+                                        <div id="categoryCollapse" class="accordion-collapse collapse">
+                                            <ul class="list-unstyled ms-3">
+                                                <li><a class="dropdown-item" href="art.html">Painting</a></li>
+                                                <li><a class="dropdown-item" href="art.html">Digital Art</a></li>
+                                                <li><a class="dropdown-item" href="art.html">Photography</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <button class="accordion-button collapsed sub-accordion-btn" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#newArrivalsCollapse"
+                                            aria-expanded="false" aria-controls="newArrivalsCollapse">
+                                            New Arrivals
+                                        </button>
+                                        <div id="newArrivalsCollapse" class="accordion-collapse collapse">
+                                            <ul class="list-unstyled ms-3">
+                                                <li><a class="dropdown-item" href="art.html">Latest Paintings</a></li>
+                                                <li><a class="dropdown-item" href="art.html">Latest Digital Art</a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="art.html">Latest Photography</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="art.html">All Arts</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+    <!--small screen navbar-->
+    <div class="d-lg-none small">
+        <div class="sm-nav-img d-flex justify-content-center">
+            <img src="Cimage/nav.png" alt="nav image" width="150px" height="50px">
+        </div>
+        <div class="container-fluid d-flex">
+            <button type="button" class="ps-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions" style="border: none; background-color: white;">
+                <i class="bi bi-list"></i>
+            </button>
+            <div class="ms-auto p-3">
+                <a href="favourite.html" class="me-3"><i class="bi bi-bookmark-heart"></i></a></i>
+                <a href="contact.html" class="me-3"><i class="bi bi-envelope-at"></i></a></i>
+                <a href="profile.html"><i class="bi bi-person-lines-fill"></i></a></i>
+            </div>
+            <div class="search-bar">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search..." aria-label="Search"
+                        aria-describedby="search-addon">
+                    <button class="btn btn-outline-secondary" type="button" id="search-addon">
+                        <i class="bi bi-search-heart"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--large screen navbar-->
+    <nav class="navbar navbar-expand-lg d-none d-lg-block">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="art_quiz.html">Art & Mood Explorer</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Artists
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-4">
+                                    <p class="txt-decoration">Famous Artists</p>
+                                    <li><a class="dropdown-item" href="artist1.html">Anjolie Ela Menon</a></li>
+                                    <li><a class="dropdown-item" href="artist2.html">Claude Monet</a></li>
+                                    <li><a class="dropdown-item" href="artist3.html">M.F. Husain</a></li>
+                                </div>
+                                <div class="col-4">
+                                    <p class="txt-decoration">Emerging Artists</p>
+                                    <li><a class="dropdown-item" href="artist4.html">Rohit Kumar</a></li>
+                                    <li><a class="dropdown-item" href="artist5.html">Aarti Sunder</a></li>
+                                    <li><a class="dropdown-item" href="artist6.html">Julie Curtiss</a></li>
+                                </div>
+                                <div class="col-4">
+                                    <p class="txt-decoration">Other</p>
+                                    <li><a class="dropdown-item" href="artist.html">All Artists</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Artworks
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="txt-decoration">Category</p>
+                                    <li><a class="dropdown-item" href="art.html">Painting</a></li>
+                                    <li><a class="dropdown-item" href="art.html">Digital Art</a></li>
+                                    <li><a class="dropdown-item" href="art.html">Photography</a></li>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="txt-decoration">New Arrivals</p>
+                                    <li><a class="dropdown-item" href="art.html">Latest Paintings</a></li>
+                                    <li><a class="dropdown-item" href="art.html">Latest Digital Art</a></li>
+                                    <li><a class="dropdown-item" href="art.html">Latest Photography</a></li>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="txt-decoration">Other</p>
+                                    <li><a class="dropdown-item" href="art.html">Browse All Artworks</a></li>
+                                </div>
+                            </div>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="mx-auto">
+                    <a class="navbar-brand" href="home.html">
+                        <img src="Cimage/nav.png" class=" pb-2" alt="" width="150px" height="50px">
+                    </a>
+                </div>
+                <div class="icon-container ms-lg-5">
+                    <a href="favourite.html"><i class="bi bi-bookmark-heart"></i></a></i>
+                    <a href="contact.html"><i class="bi bi-envelope-at"></i></a></i>
+                    <a href="profile.html"><i class="bi bi-person-lines-fill"></i></a></i>
+                </div>
+                <div class="search-container position-relative">
+                    <form class="d-flex align-items-center">
+                        <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-search" type="submit"><i class="bi bi-search-heart"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-------------------------------------------------------------------------------------------->
+
+    <!-------------------------------------------Home Page---------------------------------------->
+
+    <!--Hero Section-->
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Discover Art <br> That Matches Your Emotions</h1>
+            <div class="d-flex justify-content-center gap-3 mt-4">
+                <a href="art_quiz.html" class="btn btn-hero">Take Mood Quiz</a>
+                <a href="art.html" class="btn btn-hero">Discover Arts</a>
+            </div>
+        </div>
+    </div>
+
+    <!--------->
+
+    <!--Product Slider-->
+
+    <div class="container-fluid product-slider mt-4">
+        <h3 class="custom-header pt-4 text-center">Featured Artworks</h3>
+        <div id="artCarousel" class="carousel slide carousel-fade pb-4 pt-0" data-bs-ride="carousel"
+            data-bs-interval="6000">
+            <!-- Dots (Indicators) -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#artCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#artCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            <!-- Carousel Inner -->
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="row m-auto g-4">
+                        <div class="col-6 col-md-3 artwork">
+                            <a href="art_description.html">
+                            <img src="Cimage/art2.jpg" alt="art 1">
+                            <div class="art-info">
+                                <h5>Dual Suns of Autumn</h5>
+                                <p>By Rohit Kumar | 2024</p>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3 artwork">
+                            <a href="art_description.html">
+                            <img src="Cimage/art3.jpg" alt="art 2">
+                            <div class="art-info">
+                                <h5>Dissolve</h5>
+                                <p>By Julie Curtiss | 2023</p>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3 artwork">
+                            <a href="art_description.html">
+                            <img src="Cimage/art4.jpg" alt="art 3">
+                            <div class="art-info">
+                                <h5>The Peaceful Fox</h5>
+                                <p>By Rohit Kumar | 2023</p>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3 artwork">
+                            <a href="art_description.html">
+                            <img src="Cimage/art5.jpg" alt="art 4">
+                            <div class="art-info">
+                                <h5>London in Watercolors</h5>
+                                <p>By Rohit Kumar | 2024</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="row m-auto g-4">
+                        <div class="col-6 col-md-3 artwork">
+                            <a href="art_description.html">
+                            <img src="Cimage/art6.jpg" alt="art 1">
+                            <div class="art-info">
+                                <h5>Golden Harmony</h5>
+                                <p>By Julie Curtiss | 2025</p>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3 artwork">
+                            <a href="art_description.html">
+                            <img src="Cimage/art7.jpg" alt="art 2">
+                            <div class="art-info">
+                                <h5>Reflections at Sunset</h5>
+                                <p>By Rohit Kumar | 2024</p>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3 artwork">
+                            <a href="art_description.html">
+                            <img src="Cimage/art8.jpg" alt="art 3">
+                            <div class="art-info">
+                                <h5>Radiant Dreams</h5>
+                                <p>By Arjun Mehta | 2023</p>
+                            </div>
+                            </a>
+                        </div>
+
+                        <div class="col-6 col-md-3 artwork">
+                            <a href="art_description.html">
+                            <img src="Cimage/art2.jpg" alt="art 4">
+                            <div class="art-info">
+                                <h5>Silent Night</h5>
+                                <p>By Arjun Mehta | 2020</p>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center py-3">
+            <a href="art.html"><button type="button" class="btn explore-btn">Explore More Artworks</button></a>
+        </div>
+    </div>
+
+    <!--------->
+
+    <!--About Section-->
+
+    <div class="container-fluid about-section text-center mt-4">
+        <h3 class="custom-header2 pt-4 text-center">About HeArtVibe</h3>
+        <div class="row pt-4">
+            <div class="col-md-4">
+                <i class="bi bi-palette"></i>
+                <h5>Explore Emotions Through Art</h5>
+                <p> HeArtVibe is a unique platform designed to connect your feelings with carefully curated artwork,
+                    making every visit a personal journey of discovery.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-people-fill"></i>
+                <h5>Connect With Artists</h5>
+                <p>Discover talented creators, learn about their stories, and support their craft while experiencing
+                    the deep emotional connection art brings to life.</p>
+            </div>
+            <div class="col-md-4">
+                <i class="bi bi-heart-fill"></i>
+                <h5>Feel & Heal</h5>
+                <p> Whether you seek inspiration, solace, or joy, HeArtVibe empowers you to explore art that
+                    reflects your mood and helps you express your inner self.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--------->
+
+    <!--Artist Carousel-->
+
+    <div class="container-fluid artist-section mt-4">
+        <h3 class="custom-header pt-4 text-center">Our Artists</h3>
+        <div id="artistCarousel" class="carousel slide py-4 text-center" data-bs-ride="carousel"
+            data-bs-interval="4000">
+            <div class="carousel-inner">
+                <!-- Artist 1 -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center">
+                        <div class="col-md-5">
+                            <img src="Cimage/artist1.jpg" alt="Artist 1">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="mb-0 mt-5 mt-md-0">Aarti Sunder</h4>
+                            <p class="fst-italic mt-0 pt-0">"Art is a dialogue between the seen and the unseen."</p>
+                            <p>
+                                Aarti Sunder is a multidisciplinary Indian artist working across video, text, and
+                                installation. Her work examines how technology, communication, and perception shape
+                                human relationships and emotions. Through minimal visuals and layered narratives,
+                                she invites viewers to question what it means to “feel” in the digital age.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Artist 2 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-5">
+                            <img src="Cimage/artist2.jpg" alt="Artist 1">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="mb-0 mt-5 mt-md-0">Julie Curtiss</h4>
+                            <p class="fst-italic mt-0 pt-0">"I like to reveal the uncanny in the everyday."</p>
+                            <p>
+                                Julie Curtiss is a French-born, Brooklyn-based artist celebrated for her surreal,
+                                humorous, and feminist imagery. Her paintings and sculptures explore the tension
+                                between beauty and absurdity, often focusing on the mysterious, fragmented nature
+                                of women’s identities and modern life.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Artist 3 -->
+                <div class="carousel-item">
+                    <div class="row align-items-center">
+                        <div class="col-md-5">
+                            <img src="Cimage/artist3.jpg" alt="Artist 1">
+                        </div>
+                        <div class="col-md-7">
+                            <h4 class="mb-0 mt-5 mt-md-0">Anjolie Ela Menon</h4>
+                            <p class="fst-italic mt-0 pt-0">"Art is not what you see, but what you make others see."</p>
+                            <p>
+                                Anjolie Ela Menon is one of India’s most acclaimed contemporary painters known for her
+                                luminous portraits and ethereal figures. Her work combines Byzantine influences with
+                                Indian sensibilities, exploring themes of identity, femininity, and emotion through
+                                layered textures and translucent colors.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#artistCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#artistCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="text-center pb-3">
+            <a href="artist.html"><button type="button" class="btn explore-btn">Explore More Artist</button></a>
+        </div>
+    </div>
+
+    <!--------->
+
+    <!-------------------------------------------Common Footer------------------------------------>
+
+    <div class="mt-5 mb-3 f-u-img">
+        <img src="Cimage/footer-img.jpeg" alt="footer-image" width="100%" height="300px" style="object-fit: cover;">
+    </div>
+
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 d-flex align-items-center justify-content-center">
+                    <img src="Cimage/nav.png" alt="HeArtVibe Logo" width="160px" height="80px">
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-header my-4">Contact Us</h4>
+                    <p><i class="bi bi-phone me-3"></i>+91 6352832766</p>
+                    <p><i class="bi bi-telephone-plus me-3"></i>+91 1234567890</p>
+                    <p><i class="bi bi-envelope-at me-3"></i><a href="mailto:info@heartvibe.com"
+                            class="text-white">HeArtVibe@gmail.com</a></p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="footer-header my-4">Our Address</h4>
+                    <p>123 Art City</p>
+                    <p>Rajkot , Gujrat - 123456</p>
+                </div>
+                <div class="col-lg-3 f-newsletter">
+                    <h4 class="footer-header my-4 ">Newsletter</h4>
+                    <form class="d-flex flex-column" action="#" method="post">
+                        <input type="email" class="form-control mb-2" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-sm">Subscribe</button>
+                    </form>
+                    <div class="social-icons my-3">
+                        <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <div class="text-center" style="background-color: var(--ebony); color: var(--white);">
+        <p class="m-0">&copy; 2025 HeArtVibe. All rights reserved.</p>
+    </div>
+
+    <!-------------------------------------------------------------------------------------------->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
